@@ -12,5 +12,5 @@ title:  Team
 ## Sanchit Sinha
 ***UCI Net ID***: sanchits
 
-## USER 3
-***UCI Net ID***: ucinetid3
+## Jason Lee
+***UCI Net ID***: timotml1
