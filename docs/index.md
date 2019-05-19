@@ -6,5 +6,7 @@ title:  Home
 
 ## Source code / Resources
 Our repository [here](https://github.com/rama1997/GiveUsAnA)
+
 Malmo [here](https://github.com/Microsoft/malmo)
+
 A3C [here](https://github.com/awjuliani/DeepRL-Agents)
