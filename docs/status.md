@@ -33,7 +33,9 @@ $$Value Loss: L = Σ(R - V(s))²$$
 $$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
 
 ## Evaluation
-To measure the performance of our agent, the metrics used to measure the performance of our project will be how much health the agent loses during the fight and how fast the agent kills/reaches the enemy. As the agent gets better, the agent should be able to reach the enemy faster while taking less damage.
+To measure the performance of our agent, we will use the metrics of agent health and the time to finish the mission (kill the enemy). The performance of our project will be measured by how much health the agent loses during it's course to reach the enemy and how fast the agent kills/reaches the enemy. As the agent gets better, the agent should be able to reach the enemy faster while taking less damage. 
+
+As our agent gets better, it should be learning the shortest path to reach the enemy in order to have a fast mission clear time. This shortest path should also be the path that results in the least amount of damage taken by the agent. 
 
 ## Remaining Goals and Challenges
 Our ultimate goal for our project is to get the agent to swiftly move toward the enemy while taking the least amount of damage with the help and use of weapons, potions, and enchantment. At the time of this status report, we are only working on getting our agent to reach the enemy while not getting hit by the enemy. Our plans for the next few weeks is that if we can get our agent to get this baseline scenario down, we would hope to include the other aspects of weapons and potions. 
