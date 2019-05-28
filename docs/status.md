@@ -3,7 +3,7 @@ layout: default
 title:  Status
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MmB9b5njVbA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ccVWA_YuANU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Project Summary
 In our initial project proposal, we wanted to make an agent that will eliminate enemies as swiftly as possible while taking the least amount of damage. Our original idea was to put obstacles in between the agent and the enemy and have our agent successfully maneuver toward the enemy as the enemy is shooting at the agent. While maneuvering toward the enemy, our agent will also have to learn how to enchant their weapons, use potions, or use obstacles in order avoid death. Although still our goal for this project, we first want to focus on getting our agent to move toward the enemy while taking the least damage without account for extra factors like weapons and potion first. For this status report, we are only working around getting an agent to move toward the enemy while taking the least amount of damage.
@@ -35,7 +35,7 @@ $$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
 ## Evaluation
 To measure the performance of our agent, we will use the metrics of agent health and the time to finish the mission (kill the enemy). The performance of our project will be measured by how much health the agent loses during it's course to reach the enemy and how fast the agent kills/reaches the enemy. As the agent gets better, the agent should be able to reach the enemy faster while taking less damage. 
 
-As our agent gets better, it should be learning the shortest path to reach the enemy in order to have a fast mission clear time. This shortest path should also be the path that results in the least amount of damage taken by the agent. 
+In our project, we want the agent to get to the enemy location and kill them as quick as possible. We can see improvments based on how fast our agent actually gets to the enemy and kill them. We also want our agent to be able to take cover behind terrains or take paths that will remove them from the enemy's range of fire. We will evaluate this portion by looking at how much health our agent has lost at the end of the mission. As our agent gets better, it should be learning the shortest path to reach the enemy in order to have a fast mission clear time. This shortest path should also be the path that results in the least amount of damage taken by the agent. 
 
 ## Remaining Goals and Challenges
 Our ultimate goal for our project is to get the agent to swiftly move toward the enemy while taking the least amount of damage with the help and use of weapons, potions, and enchantment. At the time of this status report, we are only working on getting our agent to reach the enemy while not getting hit by the enemy. Our plans for the next few weeks is that if we can get our agent to get this baseline scenario down, we would hope to include the other aspects of weapons and potions. 
