@@ -29,6 +29,7 @@ $$Advantage Estimate: A = R - V(s)$$
 With the data that a worker obtains, the discounted return and advantage is calculated. With those value, we can calculate the value loss and the policy loss. Using these losses, the worker can obtain the gradient taking into account it's own network parameters. The gradient is then used by the worker to update the global network
 
 $$Value Loss: L = Σ(R - V(s))²$$
+
 $$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
 
 ## Evaluation
