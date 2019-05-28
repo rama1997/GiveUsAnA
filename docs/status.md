@@ -46,4 +46,4 @@ Based on our experiences so far, some of the anticipated challenges that we migh
 
 
 ## Resources Used
-Resources that were used in our project includes a technique called Asynchronous Advantage Actor Critic (A3C) algorithm in Tensorflow. Originally used in an environment for the game DOOM, we are trying to implement it into our Malmo environment. Links and information about A3C can be found on our home pag
+Resources that were used in our project includes a technique called Asynchronous Advantage Actor Critic (A3C) algorithm in Tensorflow. Originally used in an environment for the game DOOM, we are trying to implement it into our Malmo environment. Links and information about A3C can be found on our home page.
