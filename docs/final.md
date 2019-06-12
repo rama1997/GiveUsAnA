@@ -40,4 +40,10 @@ To measure the performance of our agent, we will use the metrics of agent health
 In our project, we want the agent to get to the enemy location and kill them as quick as possible. We can see improvments based on how fast our agent actually gets to the enemy and kill them. We also want our agent to be able to take cover behind terrains or take paths that will remove them from the enemy's range of fire. We will evaluate this portion by looking at how much health our agent has lost at the end of the mission. As our agent gets better, it should be learning the shortest path to reach the enemy in order to have a fast mission clear time. This shortest path should also be the path that results in the least amount of damage taken by the agent. 
 
 ## Resources Used
-Resources that were used in our project includes a technique called Asynchronous Advantage Actor Critic (A3C) algorithm in Tensorflow. Originally used in an environment for the game DOOM, we are trying to implement it into our Malmo environment. Links and information about A3C can be found on our home page.
+Resources that were used in our project includes a technique called Asynchronous Advantage Actor Critic (A3C) algorithm in Tensorflow. Originally used in an environment for the game DOOM, we are trying to implement it into our Malmo environment. Links and information can be found below.
+
+[Our repository](https://github.com/rama1997/GiveUsAnA)
+
+[Malmo](https://github.com/Microsoft/malmo)
+
+[A3C](https://github.com/awjuliani/DeepRL-Agents)
