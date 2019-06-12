@@ -37,13 +37,5 @@ To measure the performance of our agent, we will use the metrics of agent health
 
 In our project, we want the agent to get to the enemy location and kill them as quick as possible. We can see improvments based on how fast our agent actually gets to the enemy and kill them. We also want our agent to be able to take cover behind terrains or take paths that will remove them from the enemy's range of fire. We will evaluate this portion by looking at how much health our agent has lost at the end of the mission. As our agent gets better, it should be learning the shortest path to reach the enemy in order to have a fast mission clear time. This shortest path should also be the path that results in the least amount of damage taken by the agent. 
 
-## Remaining Goals and Challenges
-Our ultimate goal for our project is to get the agent to swiftly move toward the enemy while taking the least amount of damage with the help and use of weapons, potions, and enchantment. At the time of this status report, we are only working on getting our agent to reach the enemy while not getting hit by the enemy. Our plans for the next few weeks is that if we can get our agent to get this baseline scenario down, we would hope to include the other aspects of weapons and potions. 
-
-We currently do not have a working version of the full A3C implementation. Instead of many asynchronous worker working at the same time, we currently just have one worker that is sole data provider to the global network. Our goal for the next 2-3 weeks would definitely be to complete the full implementation of the A3C algorithm with many workers instead of just one.
-
-Based on our experiences so far, some of the anticipated challenges that we might face for the next 2-3 weeks will be completing the A3C implementation with many worker instead of just one worker. Our current prototype only includes movement commands for our agent and does not include other external commands like potions and enchantments. Our goal at the end is to allow agents to have access to more than just movement commands and we anticipate that adding potions and enchantments will require configuring our algorithm.  
-
-
 ## Resources Used
 Resources that were used in our project includes a technique called Asynchronous Advantage Actor Critic (A3C) algorithm in Tensorflow. Originally used in an environment for the game DOOM, we are trying to implement it into our Malmo environment. Links and information about A3C can be found on our home page.
