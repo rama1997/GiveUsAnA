@@ -13,11 +13,16 @@ Our goal of our project was to create an agent that can eliminate any enemy or e
 
 We wanted to get the basics down first so we could start small and build our way up. We decided  to focus on getting our agent to move toward the enemy while taking the least amount of damage and then proceeding to kill the enemy. We planned to account for the extra external factors and commands like weapons and potion after we perfected our base case of just movement. However, we eventually decided to just focus on simple movement and pathfinding while ignoring the other external commands.
 
-In our project, we used a technique called the Asynchronous Advantage Actor-Critic (A3C) algorithm in order to implement our agent and AI learning.
+For the machine learning aspect of our project, we used a technique called the Asynchronous Advantage Actor-Critic (A3C) algorithm in order to implement our agent and AI learning. Originally used in an environment for the game DOOM, we have implemented it into our Malmo environment. 
 
 
 ## Approach
 For our project, we will be using the Asynchronous Advantage Actor-Critic (A3C) algorithm in Tensorflow to create our agent. In A3C, there are multiple agent workers who each have their own copy of the environment. These agents will each interact and train within their own environment at the same time, independent of each other. The agents will then relay informations gained back to the global network where the "critic" will adjust the global values based on information received. This method is beneficial because more work is getting done at the same time as well as the agent being independent from each other.
+
+<img src="https://cdn-images-1.medium.com/max/1600/1*YtnGhtSAMnnHSL8PvS7t_w.png" width="40%"> 
+
+[Picture Source](https://cdn-images-1.medium.com/max/1600/1*YtnGhtSAMnnHSL8PvS7t_w.png)
+
 
 First, the A3C algorithm constructs a global network. Then worker agents are created with their own set of parameters, environment, and network. Each worker then set it's own network parameter to match that of the global network. The workers will then interact within its own environment and collect its own data independent of the other workers. Once a worker has enough data, it will update the global network's parameter. The worker will then repeat the whole process by resetting it's own network parameter to match the global network's new parameter.
 
@@ -42,16 +47,19 @@ $$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
 
 
 ## Evaluation
-To measure the performance of our agent, we will use the metrics of agent health and the time to finish the mission (kill the enemy). The performance of our project will be measured by how much health the agent loses during it's course to reach the enemy and how fast the agent kills/reaches the enemy. As the agent gets better, the agent should be able to reach the enemy faster while taking less damage. 
+Since the aim of our project is to have our agent reach the enemy while taking the least amount of damage, we will measure the performance of our agent by using the metric and statistics of  the mission completeness time,  how fast the agent kills/reaches the enemy,  and how much health the agent loses during the fight. As the agent gets better, the agent should be able to reach the enemy faster while taking less damage. 
 
-In our project, we want the agent to get to the enemy location and kill them as quick as possible. We can see improvments based on how fast our agent actually gets to the enemy and kill them. We also want our agent to be able to take cover behind terrains or take paths that will remove them from the enemy's range of fire. We will evaluate this portion by looking at how much health our agent has lost at the end of the mission. As our agent gets better, it should be learning the shortest path to reach the enemy in order to have a fast mission clear time. This shortest path should also be the path that results in the least amount of damage taken by the agent. 
+The completion time of the mission will tell us how fast the agent has complete the mission by reaching and killing the enemy. As the agent gets better, the completion time of the mission should go down as the agent should learn the fastest path that will lead them to the enemy faster and kill them. The amount of health the agent loses during the mission is another metric that we will use to evaluate the success and result of our agent. As the agent gets better, the health lost should decrease as it should find better and safer paths to take in order to reach the enemy.
 
 
 ## Resources Used
-Resources that were used in our project includes a technique called Asynchronous Advantage Actor Critic (A3C) algorithm in Tensorflow. Originally used in an environment for the game DOOM, we are trying to implement it into our Malmo environment. Links and information can be found below.
+Resources that were used in our project includes a technique called Asynchronous Advantage Actor Critic (A3C) algorithm in Tensorflow. Links and information can be found below.
 
-[Our repository](https://github.com/rama1997/GiveUsAnA)
+[Our repository](https://github.com/rama1997/GiveUsAnA)q
 
 [Malmo](https://github.com/Microsoft/malmo)
 
-[A3C](https://github.com/awjuliani/DeepRL-Agents)
+[A3C Github](https://github.com/awjuliani/DeepRL-Agents)
+
+We would like to give a huge thanks to Professor Singh and our TA Stephen for guidance on our project throughout this quarter.
+
