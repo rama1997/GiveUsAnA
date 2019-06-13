@@ -95,7 +95,7 @@ Resources that were used in our project includes a technique called Asynchronous
 
 [A3C Article](https://jaromiru.com/2017/02/16/lets-make-an-a3c-theory/)
 
-[](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2)
+[A3C Article](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2)
 
 [A3C Article](https://medium.com/@shagunm1210/implementing-the-a3c-algorithm-to-train-an-agent-to-play-breakout-c0b5ce3b3405)
 
