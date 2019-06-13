@@ -35,23 +35,33 @@ First, the A3C algorithm constructs a global network. Then worker agents are cre
 
 At the global network, there will also be a stochastic policy $$π(s)$$ that represent the set of action probability outputs or the distribution of probablities over actions which should sum up to a total of 1.0. We determine how good a state is via the value function $$V(s)$$. The value function $$V(s)$$ is an expected discounted return. The agent uses the value estimate set by the the critic to update the policy so that the agent can more intelligently obtain better results.
 
+
 $$Discounted Reward: R = γ(r)$$
+
 
 $$Action Value Function: Q(s,a) = r + γV(s′)$$
 
-The action value function is the weighted-average for every possible action a that we can take on state s.
+
+We obtain the weighted-average of $$r + γV(s′)$$ for every possible action a that we can take on state s. The action value function is simply given the state s and action a which will result in only one next state at s'.
+
 
 $$Advantage: A(s,a) = Q(s,a) - V(s)$$
 
+
 The advantage function is a function that when given an input of a state s and a action a, determines how good taking the action is compared to the adverage. If taking action a at state s leads to a result that is better than average, then the advantage function will be positive. If taking action a at state s leads to a result that is worse than average, then the advantage function will be negative.
+
 
 $$Advantage Estimate: A = R - V(s)$$
 
+
 In our advantage function of A3C, we can replace the action value function with the discounted rewarded value as an estimate value. This results in our advantage estimate equation.
+
 
 With the data that a worker obtains, the discounted return and advantage is calculated. With those value, we can calculate the value loss and the policy loss. Using these losses, the worker can obtain the gradient taking into account it's own network parameters. The gradient is then used by the worker to update the global network
 
+
 $$Value Loss: L = Σ(R - V(s))²$$
+
 
 $$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
 
