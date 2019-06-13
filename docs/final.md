@@ -9,9 +9,9 @@ title:  Final Report
 
 
 ## Project Summary
-Our goal of our project was to create an agent that can eliminate any enemy or enemies that appear in front of them as swiftly as possible while taking the least amount of damage. Our original idea was to put terrains and various obstacles in between the agent and the enemy and have our agent successfully maneuver toward the enemy. As our agent moved toward the enemy, the enemy would shoot weapon projectiles at the agent causing the agent to take damage. We also planned to create traps within the map that the agent could trigger and take damage. While maneuvering toward the enemy, our agent will also have to learn how to enchant their weapons, use potions, or use obstacles in order to avoid death. With all these factors coming into play, we wanted our agent to find the best path that would lead them to the enemy in which the agent also takes the least amount of damage. As time went out, we decided to tone down our project as it was too ambiguous and complex. 
+Our original goal of our project was to create an agent that can eliminate any enemy or enemies that appear in front of them as swiftly as possible while taking the least amount of damage. Our original idea was to put terrains and various obstacles in between the agent and the enemy and have our agent successfully maneuver toward the enemy. As our agent moved toward the enemy, the enemy would shoot weapon projectiles at the agent causing the agent to take damage. We also planned to create traps within the map that the agent could trigger and take damage. While maneuvering toward the enemy, our agent will also have to learn how to enchant their weapons, use potions, or use obstacles in order to avoid death. With all these factors coming into play, we wanted our agent to find the best path that would lead them to the enemy in which the agent also takes the least amount of damage. As time went out, we decided to tone down our project as it was too ambiguous and complex. 
 
-We wanted to get the basics down first so we could start small and build our way up. We decided  to focus on getting our agent to move toward the enemy while taking the least amount of damage and then proceeding to kill the enemy. We planned to account for the extra external factors and commands like weapons and potion after we perfected our base case of just movement. However, we eventually decided to just focus on simple movement and pathfinding while ignoring the other external commands.
+We wanted to get the basics down first so we could start small and build our way up. We decided  to focus on getting our agent to move toward the enemy while taking the least amount of damage and then proceeding to kill the enemy. We planned to account for the extra external factors and commands like weapons and potion after we perfected our base case of just movement. However, we eventually decided to just focus on simple movement and pathfinding while ignoring the other external commands. Ignoring all the external factors beside an enemy and obstacles, we worked toward making an agent that can move around the obstacles toward the enemy and kill the enemy.
 
 For the machine learning aspect of our project, we used a technique called the Asynchronous Advantage Actor-Critic (A3C) algorithm in order to implement our agent and AI learning. Originally used in an environment for the game DOOM, we have implemented it into our Malmo environment. 
 
@@ -42,7 +42,7 @@ $$Discounted Reward: R = γ(r)$$
 $$Action Value Function: Q(s,a) = r + γV(s′)$$
 
 
-We obtain the weighted-average of $$r + γV(s′)$$ for every possible action a that we can take on state s. The action value function is simply given the state s and action a which will result in only one next state at s'.
+The action value function is essentially the Q-value from the method Q-Learning. It determines a value obtained from taking a certain action a on a certain state s. We obtain the weighted-average of $$r + γV(s′)$$ for every possible action a that we can take on state s. The action value function is simply given the state s and action a which will result in only one next state at s'.
 
 
 $$Advantage: A(s,a) = Q(s,a) - V(s)$$
@@ -64,6 +64,8 @@ $$Value Loss: L = Σ(R - V(s))²$$
 
 
 $$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
+
+The policy loss helps the actor determine which behavior/action taken was good and which was bad. This will help and make the agent do more beneficial and positive actions rather than negative actions. Both the losses are sent up to the global network along with other data in order to improve the whole system.
 
 
 ## Evaluation
