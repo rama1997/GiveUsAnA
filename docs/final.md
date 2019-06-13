@@ -16,7 +16,7 @@ Our original goal of our project was to create an agent that can eliminate any e
 
 We wanted to get the basics down first so we could start small and build our way up. We decided  to focus on getting our agent to move toward the enemy while taking the least amount of damage and then proceeding to kill the enemy. We planned to account for the extra external factors and commands like weapons and potion after we perfected our base case of just movement. However, we eventually decided to just focus on simple movement and pathfinding while ignoring the other external commands. Ignoring all the external factors beside an enemy and obstacles, we worked toward making an agent that can move around the obstacles toward the enemy and kill the enemy.
 
-For the machine learning aspect of our project, we used a technique called the Asynchronous Advantage Actor-Critic (A3C) algorithm in order to implement our agent and AI learning. Originally used in an environment for the game DOOM, we have implemented it into our Malmo environment. 
+For the machine learning aspect of our project, we used a technique called the Asynchronous Advantage Actor-Critic (A3C) algorithm in order to implement our agent and AI learning. Originally used in an environment for the game DOOM, we have implemented it into our Malmo environment. Although A3C is the overall main technique, it uses aspects of Q-Learning to implement. We also uses frame data as well.
 
 
 
