@@ -19,6 +19,8 @@ We wanted to get the basics down first so we could start small and build our way
 For the machine learning aspect of our project, we used a technique called the Asynchronous Advantage Actor-Critic (A3C) algorithm in order to implement our agent and AI learning. Originally used in an environment for the game DOOM, we have implemented it into our Malmo environment. Although A3C is the overall main technique, it uses aspects of Q-Learning to implement.
 
 
+<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/62436412_465622304192830_4614233204616855552_n.jpg?_nc_cat=108&_nc_oc=AQmleTHlRD9T6UDtAS3w1szRdgG2J6-qnVTxvrCuODLGFXjqizg_8nz_XzEql33rXDAjrhqmL-Tw5mzjVt3G8nYd&_nc_ht=scontent-sjc3-1.xx&oh=035a3cadf65ba5d6f6b0167f3f738235&oe=5D91D637" width="70%"> 
+
 
 ## Approach
 
