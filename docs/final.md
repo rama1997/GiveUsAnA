@@ -55,7 +55,7 @@ The completion time of the mission will tell us how fast the agent has complete 
 ## Resources Used
 Resources that were used in our project includes a technique called Asynchronous Advantage Actor Critic (A3C) algorithm in Tensorflow. Links and information can be found below.
 
-[Our repository](https://github.com/rama1997/GiveUsAnA)q
+[Our repository](https://github.com/rama1997/GiveUsAnA)
 
 [Malmo](https://github.com/Microsoft/malmo)
 
