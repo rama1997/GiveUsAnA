@@ -20,7 +20,9 @@ For the machine learning aspect of our project, we used a technique called the A
 For our project, we will be using the Asynchronous Advantage Actor-Critic (A3C) algorithm in Tensorflow to create our agent. In A3C, there are multiple agent workers who each have their own copy of the environment. These agents will each interact and train within their own environment at the same time, independent of each other. The agents will then relay informations gained back to the global network where the "critic" will adjust the global values based on information received. This method is beneficial because more work is getting done at the same time as well as the agent being independent from each other. The image below is a visual on how A3C is organized. There is a global network with its own policy function, value function, network, and input. This global network will send data down to many different workers with their own set of policy functions, value function, network, and input. The worker will then train within their own individual environment. The data from training in the environment will go back to the worker which will then relay it back to the global network.
 
 <img src="https://cdn-images-1.medium.com/max/1600/1*YtnGhtSAMnnHSL8PvS7t_w.png" width="40%"> 
+
 [Picture Source](https://cdn-images-1.medium.com/max/1600/1*YtnGhtSAMnnHSL8PvS7t_w.png)
+
 
 
 First, the A3C algorithm constructs a global network. Then worker agents are created with their own set of parameters, environment, and network. Each worker then set it's own network parameter to match that of the global network. The workers will then interact within its own environment and collect its own data independent of the other workers. Once a worker has enough data, it will update the global network's parameter. The worker will then repeat the whole process by resetting it's own network parameter to match the global network's new parameter.The image below shows the endless cycle of A3C in progress and how the whole network affects each other and loops around.
@@ -28,6 +30,7 @@ First, the A3C algorithm constructs a global network. Then worker agents are cre
 <img src="https://cdn-images-1.medium.com/max/1000/1*Hzql_1t0-wwDxiz0C97AcQ.png" width="40%"> 
 
 [Picture Source](https://cdn-images-1.medium.com/max/1000/1*Hzql_1t0-wwDxiz0C97AcQ.png)
+
 
 
 At the global network, we determine how good a state is via the value function $$V(s)$$. There will also be a policy $$π(s)$$ that represent the set of action probability outputs. The agent uses the value estimate set by the the critic to update the policy so that the agent can more intelligently obtain better results.
