@@ -17,7 +17,7 @@ For the machine learning aspect of our project, we used a technique called the A
 
 
 ## Approach
-For our project, we will be using the Asynchronous Advantage Actor-Critic (A3C) algorithm in Tensorflow to create our agent. In A3C, there are multiple agent workers who each have their own copy of the environment. These agents will each interact and train within their own environment at the same time, independent of each other. The agents will then relay informations gained back to the global network where the "critic" will adjust the global values based on information received. This method is beneficial because more work is getting done at the same time as well as the agent being independent from each other. The image below is a visual on how A3C is organized. There is a global network with its own policy function, value function, network, and input. This global network will send data down to many different workers with their own set of policy functions, value function, network, and input. The worker will then train within their own individual environment. The data from training in the environment will go back to the worker which will then relay it back to the global network.
+For our project, we will be using the Asynchronous Advantage Actor-Critic (A3C) algorithm in Tensorflow to create our agent. In A3C, there are multiple agent workers or "actors" who each have their own copy of the environment. These agents will each interact and train within their own environment at the same time, independent of each other. The agents will then relay informations gained back to the global network where the "critic" will adjust the global values based on information received. This method is beneficial because more work is getting done at the same time as well as the agent being independent from each other. The image below is a visual on how A3C is organized. There is a global network with its own policy function, value function, network, and input. This global network will send data down to many different workers with their own set of policy functions, value function, network, and input. The worker will then train within their own individual environment. The data from training in the environment will go back to the worker which will then relay it back to the global network.
 
 <img src="https://cdn-images-1.medium.com/max/1600/1*YtnGhtSAMnnHSL8PvS7t_w.png" width="40%"> 
 
@@ -35,19 +35,25 @@ First, the A3C algorithm constructs a global network. Then worker agents are cre
 
 At the global network, there will also be a stochastic policy $$π(s)$$ that represent the set of action probability outputs or the distribution of probablities over actions which should sum up to a total of 1.0. We determine how good a state is via the value function $$V(s)$$. The value function $$V(s)$$ is an expected discounted return. The agent uses the value estimate set by the the critic to update the policy so that the agent can more intelligently obtain better results.
 
-$$Discounted$$ $$Reward: R = γ(r)$$
+$$Discounted Reward: R = γ(r)$$
 
-$$Action\tValue$$
+$$Action Value Function: Q(s,a) = r + γV(s′)$$
 
-$$Advantage: A = Q(s,a) - V(s)$$
+The action value function is the weighted-average for every possible action a that we can take on state s.
 
-$$Advantage$$ $$Estimate: A = R - V(s)$$
+$$Advantage: A(s,a) = Q(s,a) - V(s)$$
+
+The advantage function is a function that when given an input of a state s and a action a, determines how good taking the action is compared to the adverage. If taking action a at state s leads to a result that is better than average, then the advantage function will be positive. If taking action a at state s leads to a result that is worse than average, then the advantage function will be negative.
+
+$$Advantage Estimate: A = R - V(s)$$
+
+In our advantage function of A3C, we can replace the action value function with the discounted rewarded value as an estimate value. This results in our advantage estimate equation.
 
 With the data that a worker obtains, the discounted return and advantage is calculated. With those value, we can calculate the value loss and the policy loss. Using these losses, the worker can obtain the gradient taking into account it's own network parameters. The gradient is then used by the worker to update the global network
 
-$$Value$$ $$Loss: L = Σ(R - V(s))²$$
+$$Value Loss: L = Σ(R - V(s))²$$
 
-$$Policy$$ $$Loss: L = -log(π(s)) * A(s) - β*H(π)$$
+$$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
 
 
 ## Evaluation
