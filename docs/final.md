@@ -33,19 +33,21 @@ First, the A3C algorithm constructs a global network. Then worker agents are cre
 
 
 
-At the global network, we determine how good a state is via the value function $$V(s)$$. There will also be a policy $$π(s)$$ that represent the set of action probability outputs. The agent uses the value estimate set by the the critic to update the policy so that the agent can more intelligently obtain better results.
+At the global network, there will also be a stochastic policy $$π(s)$$ that represent the set of action probability outputs or the distribution of probablities over actions which should sum up to a total of 1.0. We determine how good a state is via the value function $$V(s)$$. The value function $$V(s)$$ is an expected discounted return. The agent uses the value estimate set by the the critic to update the policy so that the agent can more intelligently obtain better results.
 
-$$Discounted Reward: R = γ(r)$$
+$$Discounted$$ $$Reward: R = γ(r)$$
+
+$$Action\tValue$$
 
 $$Advantage: A = Q(s,a) - V(s)$$
 
-$$Advantage Estimate: A = R - V(s)$$
+$$Advantage$$ $$Estimate: A = R - V(s)$$
 
 With the data that a worker obtains, the discounted return and advantage is calculated. With those value, we can calculate the value loss and the policy loss. Using these losses, the worker can obtain the gradient taking into account it's own network parameters. The gradient is then used by the worker to update the global network
 
-$$Value Loss: L = Σ(R - V(s))²$$
+$$Value$$ $$Loss: L = Σ(R - V(s))²$$
 
-$$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
+$$Policy$$ $$Loss: L = -log(π(s)) * A(s) - β*H(π)$$
 
 
 ## Evaluation
