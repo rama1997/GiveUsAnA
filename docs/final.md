@@ -86,17 +86,17 @@ The completion time of the mission will tell us how fast the agent has complete 
 Since we were using the implementation of the A3C algorithm, we can also evaluate the success of the project by tracking the policy loss and value loss as our agent learns. With these two values, we can get our gradient that the algorithm will use to update the global network. We can also keep track of the reward values that the agent achieves after each run of the mission.
 
 
-<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/62359123_447061562536747_1927700232909357056_n.png?_nc_cat=104&_nc_oc=AQk1vuI4RIG8QOos7NGMKRBMurvulRLr2yym038uaGkG_H_vmEvwTN8WK76y9hGw-vU&_nc_ht=scontent-sjc3-1.xx&oh=4f3991829d6e2022c1fbeb71cc184d63&oe=5D809795" width="150%"> 
+<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/62359123_447061562536747_1927700232909357056_n.png?_nc_cat=104&_nc_oc=AQk1vuI4RIG8QOos7NGMKRBMurvulRLr2yym038uaGkG_H_vmEvwTN8WK76y9hGw-vU&_nc_ht=scontent-sjc3-1.xx&oh=4f3991829d6e2022c1fbeb71cc184d63&oe=5D809795" width="125%"> 
 
-<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/64205583_310545259893530_5374734800202498048_n.png?_nc_cat=105&_nc_oc=AQk1TxpE0NTmbEFDjBorDOfLqUS443ANYtb4cIacM3mpnUYTO7wlqRk-AKPF-QXoD-w&_nc_ht=scontent-sjc3-1.xx&oh=c0e67c591be7a67cb7b03658cadb35e9&oe=5D7F2233" width="150%"> 
+<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/64205583_310545259893530_5374734800202498048_n.png?_nc_cat=105&_nc_oc=AQk1TxpE0NTmbEFDjBorDOfLqUS443ANYtb4cIacM3mpnUYTO7wlqRk-AKPF-QXoD-w&_nc_ht=scontent-sjc3-1.xx&oh=c0e67c591be7a67cb7b03658cadb35e9&oe=5D7F2233" width="125%"> 
 
-<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/64586507_384891182232946_1609764570153353216_n.png?_nc_cat=108&_nc_oc=AQmg4XhUSojwiARqobXKmAh_plym3wlMQIpQs9W7erNMo9FlU4tX3w11uKK5v3JSBFg&_nc_ht=scontent-sjc3-1.xx&oh=04f7b8220e4d1a79df13d47bc236c15b&oe=5D8FEC31" width="150%"> 
+<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/64586507_384891182232946_1609764570153353216_n.png?_nc_cat=108&_nc_oc=AQmg4XhUSojwiARqobXKmAh_plym3wlMQIpQs9W7erNMo9FlU4tX3w11uKK5v3JSBFg&_nc_ht=scontent-sjc3-1.xx&oh=04f7b8220e4d1a79df13d47bc236c15b&oe=5D8FEC31" width="125%"> 
 
-<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/64420406_449869355844462_5524408285844733952_n.png?_nc_cat=106&_nc_oc=AQkjb5iiFiF8u_aCA52aWt9IROGL2gGQBCdJO3vk2ASuRb12vQIezlQblAJMmQkA-F0&_nc_ht=scontent-sjc3-1.xx&oh=8025059b6c7d50e76e300ebfa0f50691&oe=5D9B0EE1" width="150%"> 
+<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/64420406_449869355844462_5524408285844733952_n.png?_nc_cat=106&_nc_oc=AQkjb5iiFiF8u_aCA52aWt9IROGL2gGQBCdJO3vk2ASuRb12vQIezlQblAJMmQkA-F0&_nc_ht=scontent-sjc3-1.xx&oh=8025059b6c7d50e76e300ebfa0f50691&oe=5D9B0EE1" width="125%"> 
 
 With the reward being tracked, we can see the agent learning and slowly achieving a higher reward value. 
 
-<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/62475657_299118111031315_2512597439148457984_n.png?_nc_cat=106&_nc_oc=AQnK90OavvzV8cB809MuWU3Ck4eMoGOCFqWUa20aWR2nHQ1fxX8O7kPkRr9p2zjNdbI&_nc_ht=scontent-sjc3-1.xx&oh=69f2b37625d8718b5a926b693f5edc30&oe=5D9C0A05" width="150%"> 
+<img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/62475657_299118111031315_2512597439148457984_n.png?_nc_cat=106&_nc_oc=AQnK90OavvzV8cB809MuWU3Ck4eMoGOCFqWUa20aWR2nHQ1fxX8O7kPkRr9p2zjNdbI&_nc_ht=scontent-sjc3-1.xx&oh=69f2b37625d8718b5a926b693f5edc30&oe=5D9C0A05" width="125%"> 
 
 
 ## Resources Used
