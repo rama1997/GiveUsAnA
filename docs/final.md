@@ -76,6 +76,7 @@ $$Policy Loss: L = -log(π(s)) * A(s) - β*H(π)$$
 The policy loss helps the actor determine which behavior/action taken was good and which was bad. This will help and make the agent do more beneficial and positive actions rather than negative actions. Both the losses are sent up to the global network along with other data in order to improve the whole system.
 
 
+Although the A3C algorithm is outright impressive, we ran into several limitations as we completed our project. The A3C algorithm is a resource heavy technique. Each worker is a thread on the host machine and requires a separate instance of Malmo which destroys RAM and bogs down CPU. To alleviate resource drain it is possible to run instances of Malmo on a remote machine but now the local network must support the traffic. Scalability also became an issue as the current form will only support the available threads on a single machine.
 
 ## Evaluation
 
