@@ -94,7 +94,7 @@ Since we were using the implementation of the A3C algorithm, we can also evaluat
 
 <img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/64420406_449869355844462_5524408285844733952_n.png?_nc_cat=106&_nc_oc=AQkjb5iiFiF8u_aCA52aWt9IROGL2gGQBCdJO3vk2ASuRb12vQIezlQblAJMmQkA-F0&_nc_ht=scontent-sjc3-1.xx&oh=8025059b6c7d50e76e300ebfa0f50691&oe=5D9B0EE1" width="125%"> 
 
-With the reward being tracked, we can see the agent learning and slowly achieving a higher reward value. 
+With the reward being tracked, we can see the agent learning and slowly achieving a higher reward value. Shown in the reward graph, at the start of our simulation as the agent was learning, the rewards would vary but as our agent got better, the reward that they achieved would consistently be high.
 
 <img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/62475657_299118111031315_2512597439148457984_n.png?_nc_cat=106&_nc_oc=AQnK90OavvzV8cB809MuWU3Ck4eMoGOCFqWUa20aWR2nHQ1fxX8O7kPkRr9p2zjNdbI&_nc_ht=scontent-sjc3-1.xx&oh=69f2b37625d8718b5a926b693f5edc30&oe=5D9C0A05" width="125%"> 
 
