@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<About>
+		<Summary>Advanced Fighting!</Summary>
+	</About>
+	<ModSettings>
+	    <MsPerTick>25</MsPerTick>
+			<PrioritiseOffscreenRendering> 0 </PrioritiseOffscreenRendering>
+	</ModSettings>
+	<ServerSection>
+		<ServerInitialConditions>
+			<Time>
+				<StartTime>18000</StartTime>
+				<AllowPassageOfTime>false</AllowPassageOfTime>
+			</Time>
+			<AllowSpawning>false</AllowSpawning>
+		</ServerInitialConditions>
+		<ServerHandlers>
+		</ServerHandlers>
+	</ServerSection>
+	<AgentSection mode="Survival">
+		<Name>Simple AI Fighter</Name>
+		<AgentHandlers>
+			<ChatCommands/>
+			<ContinuousMovementCommands/>
+			<MissionQuitCommands
+				quitDescription="finished killing">
+				<ModifierList
+					type='allow-list'>
+					<command>quit</command>
+				</ModifierList>
+			</MissionQuitCommands>
+			<ObservationFromRay/>
+			<RewardForDamagingEntity>
+			    <Mob type="Zombie" reward="2"/>
+			</RewardForDamagingEntity>
+			<RewardForTimeTaken
+				initialReward="0"
+				delta="-.003"
+				density="PER_TICK"/>
+			<RewardForMissionEnd rewardForDeath="-10.0">
+			    <Reward description="out_of_time" reward="0.0"/>
+			</RewardForMissionEnd>
+<!--			<ObservationFromFullStats/> -->
+		</AgentHandlers>
+	</AgentSection>
+</Mission>
