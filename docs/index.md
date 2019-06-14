@@ -10,7 +10,7 @@ title:  Home
 In this project, our team wants to create an agent that will be able to close the distance on an enemy target while taking the least amount of health damage possible. Our agent will do this by obtaining information about the environment it is in and the enemy location. With these information, our agent will decide on the best possible action to take in order to reach the enemy without taking damage. We will use a method called A3C to implement our AI.
 
 ## Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4VRJAiz9n3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eFGOl8oinlg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Source code / Resources
 [Our repository](https://github.com/rama1997/GiveUsAnA)
